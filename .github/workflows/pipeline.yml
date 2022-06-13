@@ -57,7 +57,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: |
-       curl -X POST 'https://api.newrelic.com/v2/applications/${{ secrets.NEW_RELIC_ACCOUNT_ID }}/deployments.json' \
+       curl -X POST 'https://api.newrelic.com/v2/applications/${{ secrets.NEW_RELIC_APPLICATION_ID }}/deployments.json' \
             -H 'X-Api-Key:${{ secrets.NEW_RELIC_INSIGHTS_KEY }}' -i \
             -H 'Content-Type: application/json' \
             -d \
