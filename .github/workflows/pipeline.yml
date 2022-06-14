@@ -57,7 +57,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: |
-       curl -X POST 'https://insights-collector.newrelic.com/v1/accounts/1754826/events' \
+       curl -X POST 'https://insights-collector.newrelic.com/v1/accounts/${{ secrets.NEW_RELIC_ACCOUNT_ID }}/events' \
             -H 'X-Insert-Key:${{ secrets.NEW_RELIC_INSIGHTS_KEY }}' -i \
             -H 'Content-Type: application/json' \
             -d \
