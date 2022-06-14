@@ -72,7 +72,7 @@ jobs:
           "branchName": "${{ github.ref_name }}",
           "commit": "${{ github.sha }}",
           "user": "${{ github.actor }}",
-          "buildStatus": "${{ github.job.status }}",
+          "buildStatus": "SUCCESS",
         }'
 
 
