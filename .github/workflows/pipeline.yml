@@ -63,17 +63,18 @@ jobs:
         --data-raw '{
           "eventType": "BelDeployment",
           "appId": "${{ secrets.NEW_RELIC_APPLICATION_ID }}",
-          "appName": "Velocity Devops",
+          "appName": "${{ github.event.repository.name }}",
           "revision": "${{ github.ref }}",
           "environment": "${{ github.ref_type	}}",
           "type": "${{ github.event_name}}",
           "jobName": "${{ github.job }}",
-          "buildNumber": "10",
-          "branchName": "develop",
-          "commit": "21393209409324",
-          "codeCommittedTime": "10000",
-          "codeDeployedTime": "50000",
-          "buildStatus": "GH ACTIONS"
+          "buildNumber": "00",
+          "branchName": "${{ github.ref_name }}",
+          "commit": "${{ github.sha }}",
+          "user": "${{ github.actor }}",
+          "codeCommittedTime": "00",
+          "codeDeployedTime": "01",
+          "buildStatus": "PEN GH ACTIONS"
         }'
 
 
