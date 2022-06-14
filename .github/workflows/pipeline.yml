@@ -57,13 +57,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: |
-       curl -X POST 'https://insights-collector.newrelic.com/v1/accounts/${{ secrets.NEW_RELIC_ACCOUNT_ID }}/events' \
-            -H 'X-Insert-Key:${{ secrets.NEW_RELIC_INSIGHTS_KEY }}' -i \
+       curl -X POST 'https://insights-collector.newrelic.com/v1/accounts/1754826/events' \
+            -H 'X-Insert-Key:86eef6eb515d668f7d5737da0154f9e74e53531d' -i \
             -H 'Content-Type: application/json' \
             -d \
        '{
           "eventType": "BelDeployment",
-          "appId": "${{ secrets.NEW_RELIC_APPLICATION_ID }}",
+          "appId": "1634709621",
           "appName": "Velocity Devops",
           "revision": "${{ github.ref }}",
           "environment": "${{ github.ref_type	}}",
